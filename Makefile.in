@@ -49,9 +49,10 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_simplegram_OBJECTS = simplegram.$(OBJEXT)
+am_simplegram_OBJECTS = simplegram.$(OBJEXT) net.$(OBJEXT) \
+	client.$(OBJEXT)
 simplegram_OBJECTS = $(am_simplegram_OBJECTS)
-simplegram_LDADD = $(LDADD)
+simplegram_DEPENDENCIES =
 DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/config/depcomp
 am__depfiles_maybe = depfiles
@@ -169,7 +170,13 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 simplegram_SOURCES = \
-    simplegram.cpp
+    simplegram.cpp \
+    net.cpp \
+    client.cpp
+
+simplegram_LDADD = \
+    -lssl \
+    -lcrypto
 
 all: all-am
 
@@ -256,6 +263,8 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/client.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/net.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/simplegram.Po@am__quote@
 
 .cpp.o:

@@ -1,6 +1,11 @@
 bin_PROGRAMS = simplegram
 
 simplegram_SOURCES = \
-    simplegram.cpp
-    
+    simplegram.cpp \
+    net.cpp \
+    client.cpp
 
+
+simplegram_LDADD = \
+    -lssl \
+    -lcrypto

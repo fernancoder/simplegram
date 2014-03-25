@@ -1,4 +1,4 @@
-simplegram.o: simplegram.cpp include.h /usr/include/c++/4.6/iostream \
+net.o: net.cpp include.h /usr/include/c++/4.6/iostream \
  /usr/include/c++/4.6/i686-linux-gnu/./bits/c++config.h \
  /usr/include/c++/4.6/i686-linux-gnu/./bits/os_defines.h \
  /usr/include/features.h /usr/include/i386-linux-gnu/bits/predefs.h \
