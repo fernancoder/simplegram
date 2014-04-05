@@ -10,6 +10,8 @@
 
 #define MAX_DC_SESSIONS 3
 #define GET_DC(c) (c->session->dc)
+#define PING_TIMEOUT 10
+#define ACK_TIMEOUT 1
 
 enum conn_state {
   conn_none,
@@ -77,8 +79,8 @@ struct session {
   long long session_id;
   int seq_no;
   struct connection *c;
-//  struct tree_long *ack_tree;
-//  struct event_timer ev;
+  struct tree_long *ack_tree;
+  struct event_timer ev;
 };
 
 struct dc {
@@ -102,5 +104,12 @@ struct dc {
 //struct connection_methods auth_methods;
 struct connection *create_connection (const char *host, int port, struct session *session, struct connection_methods *methods);
 int write_out (struct connection *c, const void *_data, int len);
+int send_all_acks (struct session *S);
+void insert_msg_id (struct session *S, long long id);
+
+void my_clock_gettime (int clock_id UU, struct timespec *T);  
+double get_double_time (void);
+void insert_event_timer (struct event_timer *ev);
+  
 
 #endif /* NET_H_ */

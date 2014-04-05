@@ -176,7 +176,8 @@ simplegram_SOURCES = \
 
 simplegram_LDADD = \
     -lssl \
-    -lcrypto
+    -lcrypto \
+    -lrt
 
 all: all-am
 

@@ -8,4 +8,6 @@ simplegram_SOURCES = \
 
 simplegram_LDADD = \
     -lssl \
-    -lcrypto
+    -lcrypto \
+    -lrt
+

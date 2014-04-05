@@ -81,11 +81,11 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /CODE/simplegram/config/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
-AUTOCONF = ${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run automake-1.11
+AUTOCONF = ${SHELL} /CODE/simplegram/config/missing --run autoconf
+AUTOHEADER = ${SHELL} /CODE/simplegram/config/missing --run autoheader
+AUTOMAKE = ${SHELL} /CODE/simplegram/config/missing --run automake-1.11
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -110,7 +110,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -lpthread 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run makeinfo
+MAKEINFO = ${SHELL} /CODE/simplegram/config/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = simplegram
@@ -126,10 +126,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 0.1
-abs_builddir = /home/fernando/Documentos/Proyectos/simplegram
-abs_srcdir = /home/fernando/Documentos/Proyectos/simplegram
-abs_top_builddir = /home/fernando/Documentos/Proyectos/simplegram
-abs_top_srcdir = /home/fernando/Documentos/Proyectos/simplegram
+abs_builddir = /CODE/simplegram
+abs_srcdir = /CODE/simplegram
+abs_top_builddir = /CODE/simplegram
+abs_top_srcdir = /CODE/simplegram
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -149,7 +149,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/install-sh
+install_sh = ${SHELL} /CODE/simplegram/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -176,7 +176,8 @@ simplegram_SOURCES = \
 
 simplegram_LDADD = \
     -lssl \
-    -lcrypto
+    -lcrypto \
+    -lrt
 
 all: all-am
 

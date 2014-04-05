@@ -443,7 +443,7 @@ Copyright (C) 2010 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/fernando/Documentos/Proyectos/simplegram'
+ac_pwd='/CODE/simplegram'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/bin/mkdir -p'
@@ -645,12 +645,12 @@ S["mkdir_p"]="/bin/mkdir -p"
 S["MKDIR_P"]="/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]=""
-S["install_sh"]="${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/install-sh"
-S["MAKEINFO"]="${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run autoheader"
-S["AUTOMAKE"]="${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run automake-1.11"
-S["AUTOCONF"]="${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run autoconf"
-S["ACLOCAL"]="${SHELL} /home/fernando/Documentos/Proyectos/simplegram/config/missing --run aclocal-1.11"
+S["install_sh"]="${SHELL} /CODE/simplegram/config/install-sh"
+S["MAKEINFO"]="${SHELL} /CODE/simplegram/config/missing --run makeinfo"
+S["AUTOHEADER"]="${SHELL} /CODE/simplegram/config/missing --run autoheader"
+S["AUTOMAKE"]="${SHELL} /CODE/simplegram/config/missing --run automake-1.11"
+S["AUTOCONF"]="${SHELL} /CODE/simplegram/config/missing --run autoconf"
+S["ACLOCAL"]="${SHELL} /CODE/simplegram/config/missing --run aclocal-1.11"
 S["VERSION"]="0.1"
 S["PACKAGE"]="simplegram"
 S["CYGPATH_W"]="echo"
